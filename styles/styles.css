@@ -1,8 +1,23 @@
+body { display: grid;
+       grid-template-columns: 120px 120px 120px;
+       grid-template-areas:
+             "h h h"
+             "a a a"
+             "b b c"
+             "f f f";
+     grid-template-columns: auto 1fr 20%; }
+
+  div.header  {grid-area: h; min-width: 12em; }
+  ul.breadcrumb  {grid-area: a; min-width: 12em; }
+  article {grid-area: b; min-width: 12em; }
+  aside   {grid-area: c; min-width: 12em; }
+  div.footer  {grid-area: f; min-width: 12em; }
+
 .header {
   padding-left: 10.5REM;
   padding-top: 1.5REM;
   text-indent: 0;
-  background: #1aa3ff;
+  background: #318aa4;
   color: white;
   font-size: 25px;
   font-family: sans-serif;
@@ -15,7 +30,7 @@ p.sub-header{
   color: white;
   font-size: 25px;
   font-family: sans-serif;
-  background: #1aa3ff;
+  background: #318aa4;
 }
 
 ul.breadcrumb {
@@ -67,7 +82,10 @@ h3{
 
 p {
   color: #484848;
-  width: 20REM;
+  width: 95%;
+  font-family: sans-serif;
+  font-size: 24px;
+  text-align: center;
 }
 
 figcaption{
@@ -79,21 +97,37 @@ a {
   text-decoration: none;
 }
 
-.footer{
-  position: fixed;
-  left: 0;
-  bottom: 0;
+img.footer-img{
   width: 100%;
-  filter: grayscale(100%);
+}
+
+.footer{
+position: relative;
+text-align: center;
+font-family: 'Ubuntu', sans-serif;
+font-size: 22px;
+color: white;
+}
+
+.centered-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 #quotes{
   quotes: "" ">>";
 }
 
-.footer-img{
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  z-index: -1;
+img.bottom{
+  width: 100%;
+}
+
+.aqua-quote {
+  color: #318aa4;
+}
+
+article {
+  text-align:center;
 }
