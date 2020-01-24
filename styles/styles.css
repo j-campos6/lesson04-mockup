@@ -13,11 +13,20 @@ body { display: grid;
   aside   {grid-area: c; min-width: 12em; }
   div.footer  {grid-area: f; min-width: 12em; }
 
+.hidden {
+  position: relative;
+  left: -10000px;
+  top: auto;
+}
+.hidden:focus {
+  left: 0;
+}
+
 .header {
   padding-left: 10.5REM;
   padding-top: 1.5REM;
   text-indent: 0;
-  background: #318aa4;
+  background: #225E72;
   color: white;
   font-size: 25px;
   font-family: sans-serif;
@@ -30,7 +39,7 @@ p.sub-header{
   color: white;
   font-size: 25px;
   font-family: sans-serif;
-  background: #318aa4;
+  background: #225E72;
 }
 
 ul.breadcrumb {
@@ -93,7 +102,7 @@ figcaption{
 }
 
 a {
-  color: #1aa3ff;
+  color: #0077C7;
   text-decoration: none;
 }
 
@@ -125,7 +134,7 @@ img.bottom{
 }
 
 .aqua-quote {
-  color: #318aa4;
+  color: #2E8099;
 }
 
 article {
